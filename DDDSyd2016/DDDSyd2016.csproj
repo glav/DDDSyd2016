@@ -245,6 +245,19 @@
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\IdentityServer\checksession.html" />
+    <Content Include="Content\IdentityServer\CustomIdentityServerStyles.css" />
+    <Content Include="Content\IdentityServer\FormPostResponse.html" />
+    <Content Include="Content\IdentityServer\SignoutFrame.html" />
+    <Content Include="Content\IdentityServer\_authorizeresponse.html" />
+    <Content Include="Content\IdentityServer\_consent.html" />
+    <Content Include="Content\IdentityServer\_error.html" />
+    <Content Include="Content\IdentityServer\_layout.html" />
+    <Content Include="Content\IdentityServer\_loggedOut.html" />
+    <Content Include="Content\IdentityServer\_login.html" />
+    <Content Include="Content\IdentityServer\_logout.html" />
+    <Content Include="Content\IdentityServer\_permissions.html" />
+    <Content Include="Content\IdentityServer\welcome.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -286,7 +299,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

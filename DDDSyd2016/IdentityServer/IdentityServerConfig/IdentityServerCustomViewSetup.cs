@@ -43,10 +43,8 @@ namespace DDDSyd2016.IdentityServer.IdentityServerConfig
 
                  // View options for things like consent form
                  var viewOptions = new DefaultViewServiceOptions();
-                 viewOptions.Stylesheets.Add("Content/Styles/CustomIdentityServerStyles.css");
-                 viewOptions.Stylesheets.Add("~/assets/test.css");
-                 //viewOptions.CustomViewDirectory = string.Format("{0}\\Content\\ViewAssets", env.WebRootPath);
-                 viewOptions.CustomViewDirectory = "~/Content/ViewAssets";
+                 viewOptions.Stylesheets.Add("/Content/IdentityServer/CustomIdentityServerStyles.css");
+                 viewOptions.CustomViewDirectory = string.Format("{0}Content\\IdentityServer", AppDomain.CurrentDomain.BaseDirectory);
 
 #if DEBUG
                  viewOptions.CacheViews = false;
