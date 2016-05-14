@@ -1,0 +1,253 @@
+﻿
+html, body {
+	background-color: #ebebeb;
+    font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif !important;
+}
+
+label {
+    font-weight: normal !important;
+}
+
+body header {
+	height: 49px;
+    background-color: #000;
+
+    h1 {
+        color: #fff;
+		padding: 14px 0 0 60px;
+    }
+	div {
+		float:left;
+	}
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+li {
+    list-style: none;
+}
+
+caption, th {
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+q:before, q:after {
+    content: '';
+}
+
+abbr, acronym {
+    border: 0;
+    font-variant: normal;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+legend {
+    color: #000;
+}
+
+body {
+    font: 12px/1.231 "Helvetica Neue", Helvetica, Arial, Sans-serif;
+    *font-size: small;
+    *font: x-small;
+}
+
+select, input, button, textarea {
+    font: 99% "Helvetica Neue", Helvetica, Arial, Sans-serif;
+}
+
+table {
+    font-size: inherit;
+    font: 100%;
+}
+
+pre, code, kbd, samp, tt {
+    font-family: monospace;
+    *font-size: 108%;
+    line-height: 100%;
+}
+
+h1 {
+    font-size: 138.5%;
+}
+
+h2 {
+    font-size: 123.1%;
+}
+
+h3 {
+    font-size: 108%;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+/* Identity Server overrides */
+
+
+.navbar {
+    min-height:49px !important;
+    max-height:49px !important;
+    border: none;
+
+}
+.navbar-header h1 {
+        font-size: 138.5%;
+}
+
+.navbar-inverse {
+    background-color: #622690 !important;
+}
+
+.navbar-brand {
+    line-height:18px !important;
+    color:#fff;
+
+    a:visited, a:hover {
+        color:#fff;
+        text-decoration:none;
+    }
+}
+
+div.container {
+    margin-top: 60px;
+    background-color:#fff;
+}
+
+.alert-info {
+    background-color: #6cb74c;
+    color:#fff;
+}
+.alert-danger {
+    background-color: #ff0000;
+    color:#fff;
+}
+
+.page-permissions .permissions .permission img, .client-logo img {
+    max-width: 400px;
+    max-height: 200px;
+    width: 100%;
+    height: 100%;
+}
+
+div.page-consent, div.page-loggedOut, div.page-login, div.page-logout {
+
+    .page-header {
+        margin-bottom: 0;
+        padding-bottom: 16px;
+        background-color: #fff;
+
+        h1 {
+            padding: 0 16px;
+
+            small {
+                margin-left: 16px;
+            }
+        }
+    }
+
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        background-color: #fff;
+        padding-bottom: 16px;
+        padding-top: 16px;
+
+        form {
+            padding: 8px;
+
+            .form-group {
+                margin-top: 16px;
+            }
+        }
+
+        .panel-default {
+            margin-top: 8px;
+        }
+    }
+
+    .consent-buttons {
+        a {
+            display:none;
+        }
+    }
+
+    .client-logo {
+        padding-right: 8px;
+    }
+}
+
+.panel { 
+    border-radius:0 !important;
+}
+
+.btn, .btn:hover {
+    border: none;
+    border-radius:0;
+    font-size: 12px;
+    font-weight: bold;
+}
+.btn-default, .btn-primary {
+    background-color: #ff6a00 !important;
+}
+.btn-danger {
+    background-color: #ff5e00 !important;
+}
+
+.col-sm-2 {
+    min-width: 75px;
+    max-width: 16.666666666666664%;
+    width: 0;
+}
+
+div.login-remember {
+    input[type='checkbox'] {
+        vertical-align:bottom;
+    }
+
+    padding-left:0 !important;
+}
+
+.app-permission-spiel {
+    font-weight: normal;
+}

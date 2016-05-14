@@ -1,0 +1,56 @@
+﻿
+<section class="login-page">
+
+    <section class="header-title">
+        <h2>Sign in to the app</h2>
+    </section>
+
+    <section class="content">
+        <div ng-show="model.loginUrl">
+            <form name="form" method="post" action="{{model.loginUrl}}">
+                <anti-forgery-token token="model.antiForgery"></anti-forgery-token>
+
+                <fieldset>
+                    <div class="input-field">
+                        <input required name="username" autofocus id="username" class="login-id" type="email" placeholder="Username" ng-model="model.username" maxlength="100">
+                    </div>
+                    <div class="input-field">
+                        <input required id="password" name="password" type="password" class="password" placeholder="Password" ng-model="model.password" maxlength="100" autocomplete="off" focus-if="model.username">
+                        
+                    </div>
+
+                    <div class="login-remember" ng-show="model.allowRememberMe">
+                        <label for="rememberMe">
+                            <input type="checkbox" id="rememberMe" name="rememberMe" ng-model="model.rememberMe" value="true">
+                            <span>Remember me</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div data-ng-show="model.errorMessage" class="login-error-message ng-hide alert-danger">
+                    <p>There was a problem signing in. Please check your credentials.</p>
+                </div>
+
+
+
+                <section class="login-actions">
+                    <div class="form-group">
+                        <button class="btn btn-primary">Login</button>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li ng-repeat="link in model.additionalLinks"><a ng-href="{{link.href}}">{{link.text}}</a></li>
+                    </ul>
+                </section>
+            </form>
+
+            <section class="footer-section">
+                <div class="footer-float-left">
+                    <span>© Baldy 2016</span><span> - </span>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+
+</section>

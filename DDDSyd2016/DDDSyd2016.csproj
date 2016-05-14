@@ -257,7 +257,7 @@
     <Content Include="Content\IdentityServer\_login.html" />
     <Content Include="Content\IdentityServer\_logout.html" />
     <Content Include="Content\IdentityServer\_permissions.html" />
-    <Content Include="Content\IdentityServer\welcome.html" />
+    <Content Include="Content\IdentityServer\_welcome.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
