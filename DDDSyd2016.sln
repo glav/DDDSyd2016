@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDSyd2016", "DDDSyd2016\DDDSyd2016.csproj", "{81A1540E-B926-4448-952A-4E44C4CFEDB3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{DBBB9FE5-438D-4D49-B72E-2A5395F5D46D}"
+	ProjectSection(SolutionItems) = preProject
+		Database\DB-CreationScripts.sql = Database\DB-CreationScripts.sql
+		Database\DB-DataPopulateScripts.sql = Database\DB-DataPopulateScripts.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
