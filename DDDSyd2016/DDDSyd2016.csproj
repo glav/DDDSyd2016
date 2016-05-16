@@ -248,6 +248,7 @@
     <Content Include="Content\IdentityServer\checksession.html" />
     <Content Include="Content\IdentityServer\CustomIdentityServerStyles.css" />
     <Content Include="Content\IdentityServer\FormPostResponse.html" />
+    <Content Include="Content\IdentityServer\scripts.2.0.0.js" />
     <Content Include="Content\IdentityServer\SignoutFrame.html" />
     <Content Include="Content\IdentityServer\_authorizeresponse.html" />
     <Content Include="Content\IdentityServer\_consent.html" />

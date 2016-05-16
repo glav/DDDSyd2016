@@ -83,7 +83,13 @@ namespace DDDSyd2016.IdentityServer.Diagnostics
                         DateTime.UtcNow.ToString(), 
                         msg, 
                         exceptionMessage);
-            System.IO.File.AppendAllText(_directory + "\\Diagnostics.log", fullMessage);
+            try
+            {
+                System.IO.File.AppendAllText(_directory + "\\Diagnostics.log", fullMessage);
+            } catch
+            {
+                // This empty catch comes courtery of Dodgy brothers inc.
+            }
             return true;
         }
     }
