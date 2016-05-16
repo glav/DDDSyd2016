@@ -1,6 +1,6 @@
 ﻿
 html, body {
-	background-color: #ebebeb;
+    background-color: #ebebeb;
     font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif !important;
 }
 
@@ -9,17 +9,18 @@ label {
 }
 
 body header {
-	height: 49px;
+    height: 49px;
     background-color: #000;
-
-    h1 {
-        color: #fff;
-		padding: 14px 0 0 60px;
-    }
-	div {
-		float:left;
-	}
 }
+
+    body header h1 {
+        color: #fff;
+        padding: 14px 0 0 60px;
+    }
+
+    body header div {
+        float: left;
+    }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
     margin: 0;
@@ -113,53 +114,72 @@ h3 {
     font-size: 108%;
 }
 
-h1, h2, h3, h4, h5, h6, strong {
-    font-weight: bold;
-}
-
 em {
     font-style: italic;
 }
 
 /* Identity Server overrides */
 
+.navbar-brand a {
+    color: #101ebf;
+}
 
-.navbar {
-    min-height:49px !important;
-    max-height:49px !important;
-    border: none;
+.header-title h1, h2 {
+    font-weight:bold;
+    padding: 12px 8px;
+}
+.header-title h3 {
+    padding: 4px 8px;
+    margin-left:8px;
+}
+
+.input-field {
+    padding: 8px;
+}
+
+.input-field input {
+    padding: 4px;
+    border-radius: 6px 8px;
 
 }
+
+.navbar {
+    min-height: 49px !important;
+    max-height: 49px !important;
+    border: none;
+}
+
 .navbar-header h1 {
-        font-size: 138.5%;
+    font-size: 138.5%;
 }
 
 .navbar-inverse {
-    background-color: #622690 !important;
+    background-color: #b4e7f5 !important;
 }
 
 .navbar-brand {
-    line-height:18px !important;
-    color:#fff;
-
-    a:visited, a:hover {
-        color:#fff;
-        text-decoration:none;
-    }
+    line-height: 18px !important;
+    color: #fff;
 }
+
+    .navbar-brand a:visited, a:hover {
+        color: #fff;
+        text-decoration: none;
+    }
 
 div.container {
     margin-top: 60px;
-    background-color:#fff;
+    background-color: #fff;
 }
 
 .alert-info {
     background-color: #6cb74c;
-    color:#fff;
+    color: #fff;
 }
+
 .alert-danger {
     background-color: #ff0000;
-    color:#fff;
+    color: #fff;
 }
 
 .page-permissions .permissions .permission img, .client-logo img {
@@ -169,67 +189,68 @@ div.container {
     height: 100%;
 }
 
-div.page-consent, div.page-loggedOut, div.page-login, div.page-logout {
-
-    .page-header {
-        margin-bottom: 0;
-        padding-bottom: 16px;
-        background-color: #fff;
-
-        h1 {
-            padding: 0 16px;
-
-            small {
-                margin-left: 16px;
-            }
-        }
-    }
-
-    .row {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-
-        background-color: #fff;
-        padding-bottom: 16px;
-        padding-top: 16px;
-
-        form {
-            padding: 8px;
-
-            .form-group {
-                margin-top: 16px;
-            }
-        }
-
-        .panel-default {
-            margin-top: 8px;
-        }
-    }
-
-    .consent-buttons {
-        a {
-            display:none;
-        }
-    }
-
-    .client-logo {
-        padding-right: 8px;
-    }
+.page-header {
+    margin-bottom: 0;
+    padding-bottom: 16px;
+    background-color: #fff;
 }
 
-.panel { 
-    border-radius:0 !important;
+    .page-header h1 {
+        padding: 0 16px;
+    }
+
+        .page-header h1 small {
+            margin-left: 16px;
+        }
+
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    background-color: #fff;
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+
+form {
+    padding: 8px;
+}
+
+.form-group{
+    margin-top: 16px;
+}
+
+
+.panel-default {
+    margin-top: 8px;
+}
+
+}
+
+.consent-buttons a {
+    display: none;
+}
+
+.client-logo {
+    padding-right: 8px;
+}
+
+
+
+.panel {
+    border-radius: 0 !important;
 }
 
 .btn, .btn:hover {
     border: none;
-    border-radius:0;
+    border-radius: 0;
     font-size: 12px;
     font-weight: bold;
 }
+
 .btn-default, .btn-primary {
-    background-color: #ff6a00 !important;
+    background-color: #115b9a !important;
 }
+
 .btn-danger {
     background-color: #ff5e00 !important;
 }
@@ -241,11 +262,13 @@ div.page-consent, div.page-loggedOut, div.page-login, div.page-logout {
 }
 
 div.login-remember {
-    input[type='checkbox'] {
-        vertical-align:bottom;
-    }
+    input [type='checkbox'];
 
-    padding-left:0 !important;
+{
+    vertical-align: bottom;
+}
+
+padding-left:0 !important;
 }
 
 .app-permission-spiel {

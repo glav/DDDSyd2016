@@ -21,7 +21,7 @@
                 Ideally we should customise this display to present a more meaningful explanation of scopes
                 rather than the default names of the scope.
             -->
-            <div class="ng-hide" data-ng-show="model.resourceScopes.length > 1 || (model.resourceScopes.length === 1 && model.resourceScopes[0].name !== 'offline_access')">
+            <div data-ng-show="model.resourceScopes.length > 1 || (model.resourceScopes.length === 1 && model.resourceScopes[0].name !== 'offline_access')">
                 <div class="hidden">Uncheck the permissions you do not wish to grant.</div>
 
                 <div class="panel panel-default consent-buttons" ng-show="model.identityScopes.length">
