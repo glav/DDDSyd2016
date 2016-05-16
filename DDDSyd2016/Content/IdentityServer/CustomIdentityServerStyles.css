@@ -2,6 +2,7 @@
 html, body {
     background-color: #ebebeb;
     font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif !important;
+    font-size: 1.3em !important;
 }
 
 label {
@@ -243,7 +244,7 @@ form {
 .btn, .btn:hover {
     border: none;
     border-radius: 0;
-    font-size: 12px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -273,4 +274,11 @@ padding-left:0 !important;
 
 .app-permission-spiel {
     font-weight: normal;
+}
+
+.lock-and-key {
+    background-image: url(../images/LockAndKey2.jpg);
+    background-size:contain;
+    background-repeat:no-repeat;
+    padding-left: 120px;
 }

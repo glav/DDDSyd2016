@@ -19,7 +19,7 @@ namespace DDDSyd2016.IdentityServer.InMemoryRubbish
                     },
 
                     // server to server communication
-                    Flow = Flows.ClientCredentials,
+                    Flow = Flows.ResourceOwner,
 
                     // only allowed to access api1
                     AllowedScopes = new List<string>
@@ -29,12 +29,14 @@ namespace DDDSyd2016.IdentityServer.InMemoryRubbish
                         "read",
                         "write",
                         "offline_access"
-                    }
+                    },
+                    AccessTokenType = AccessTokenType.Jwt,
+                    RefreshTokenUsage = TokenUsage.ReUse
                 },
 
                 new Client
                 {
-                    ClientName = "Client Two",
+                    ClientName = "Client Two (Jwt token)",
                     ClientId = "Client2",
                     ClientSecrets = new List<Secret>
                     {
@@ -56,8 +58,38 @@ namespace DDDSyd2016.IdentityServer.InMemoryRubbish
                         "email",
                         "read",
                         "offline_access"
-                    }
-                }
+                    },
+                    AccessTokenType = AccessTokenType.Jwt
+                },
+                new Client
+                {
+                    ClientName = "Client Three (Ref token)",
+                    ClientId = "Client3",
+                    ClientSecrets = new List<Secret>
+                    {
+                        new Secret("secret".Sha256())
+                    },
+
+                    // server to server communication
+                    Flow = Flows.AuthorizationCode,
+                    RedirectUris = new List<string>
+                    {
+                        "http://localhost:5000/callback",
+                    },
+
+                    // only allowed to access api1
+                    AllowedScopes = new List<string>
+                    {
+                        "openid",
+                        "email",
+                        "read",
+                        "write",
+                        "offline_access"
+                    },
+                    AccessTokenType = AccessTokenType.Reference
+                },
+
+
             };
         }
     }
