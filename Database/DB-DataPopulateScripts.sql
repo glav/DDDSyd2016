@@ -22,8 +22,7 @@ BEGIN
 	( 3,1, N'email', NULL, NULL, 0, 1, 0, 0, NULL, 1, 0 ), 
 	( 4,1, N'offline_access', N'Constant access to your data without re-authorising', NULL, 0, 1, 1, 1, NULL, 1, 0 ), 
 	( 5,1, N'read', N'Read data', NULL, 0, 0, 1, 1, NULL, 1, 0 ), 
-	( 6,1, N'write', N'Write data', NULL, 0, 1, 1, 1, NULL, 1, 0 ),
-	( 7,1, N'full', N'Access to all data (role dependent)', NULL, 0, 0, 1, 1, NULL, 1, 0 )
+	( 6,1, N'write', N'Write data', NULL, 0, 1, 1, 1, NULL, 1, 0 )
 	SET IDENTITY_INSERT [Auth].[Scopes] OFF
 END
 GO
@@ -67,7 +66,7 @@ INSERT INTO [Auth].[Clients]
 		   ,1
            ,'localdeveloper'
            ,'Local Development Client'
-           ,'http://localhost:8080/'
+           ,'http://localhost:5000/'
            ,'https://somesite.com/logo/logo.jpg'
            ,1
            ,1
@@ -147,7 +146,7 @@ begin
 			   ([Uri]
 			   ,[Client_Id])
 		 VALUES
-			   ('http://localhost:8080/developer/callback'
+			   ('http://localhost:5000/callback'
 			   ,1)
 	-- Add in more redirect Uri's to support staging, production etc
 	
