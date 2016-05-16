@@ -44,7 +44,11 @@ namespace DDDSyd2016.IdentityServer.IdentityServerConfig
                      Factory = new IdentityServerServiceFactory()
                         .UseInMemoryClients(Clients.Get())
                         .UseInMemoryUsers(Users.Get())
-                        .UseInMemoryScopes(Scopes.Get())
+                        .UseInMemoryScopes(Scopes.Get()),
+
+                     EnableWelcomePage = true  // leave enabled initially. Can disable and replace later
+                     
+                     
                  };
 
 

@@ -38,7 +38,8 @@ namespace DDDSyd2016.IdentityServer.IdentityServerConfig
                      SigningCertificate = CertificateLoader.LoadCertificate(),
 
                      LoggingOptions = GetFullLoggingConfig(),
-                     Factory = GetInMemoryFactoryOptions()
+                     Factory = GetInMemoryFactoryOptions(),
+                     EnableWelcomePage = true
                  };
 
                  // View options for things like consent form
@@ -51,6 +52,7 @@ namespace DDDSyd2016.IdentityServer.IdentityServerConfig
 #endif
                  options.Factory.ConfigureDefaultViewService(viewOptions);
 
+                 
 
                  idApp.UseIdentityServer(options);
 
