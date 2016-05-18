@@ -1,0 +1,9 @@
+* Request an Authorisation code for ClientId: Client2 (user: Mary, Password: password), callback: http://localhost:5000/callback
+http://localhost:35373/identity/connect/authorize?client_id=Client2&scope=offline_access&response_type=code&redirect_uri=http://localhost:5000/callback&state=abc
+
+* Basic headers
+  >> For ClientId: Client1 and user secret: secret
+     Basic Q2xpZW50MTpzZWNyZXQ=
+  >> For ClientId: Client2 and user secret: secret
+     Basic Q2xpZW50MjpzZWNyZXQ=
+
