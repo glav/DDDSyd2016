@@ -250,6 +250,11 @@ form {
 
 .btn-default, .btn-primary {
     background-color: #115b9a !important;
+    color:white;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+    color: yellow !important;
 }
 
 .btn-danger {

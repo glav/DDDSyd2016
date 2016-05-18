@@ -11,10 +11,10 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
-using DDD.Areas.HelpPage.ModelDescriptions;
-using DDD.Areas.HelpPage.Models;
+using DDDSyd2016.Areas.HelpPage.ModelDescriptions;
+using DDDSyd2016.Areas.HelpPage.Models;
 
-namespace DDD.Areas.HelpPage
+namespace DDDSyd2016.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {

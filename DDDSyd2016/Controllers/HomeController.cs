@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace DDD.Controllers
+namespace DDDSyd2016.Controllers
 {
     public class HomeController : Controller
     {

@@ -3,7 +3,7 @@ using System.Text;
 using System.Web;
 using System.Web.Http.Description;
 
-namespace DDD.Areas.HelpPage
+namespace DDDSyd2016.Areas.HelpPage
 {
     public static class ApiDescriptionExtensions
     {

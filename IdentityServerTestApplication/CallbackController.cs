@@ -10,9 +10,16 @@ namespace IdentityServerTestApplication
     public class CallbackController : ApiController
     {
         [HttpGet]
-        public async Task<string> Index(string code, string state = null)
+        public async Task<string> Index(string code, string error = null, string state = null)
         {
-            var msg = $"Callback received. 'Authorisation code' of [{code}] and 'state' parameter of [{state}] was passed in.";
+            var msg = "Callback received. ";
+            if (!string.IsNullOrWhiteSpace(error))
+            {
+                msg += $"Error! [{error}]";
+                Output.Write(msg);
+                return msg;
+            }
+            msg += $"Authorisation code' of [{code}] and 'state' parameter of [{state}] was passed in.";
             Output.Write(msg);
 
             var accessTokenHandler = new AuthCodeCallbackHandler();

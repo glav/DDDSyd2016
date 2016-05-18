@@ -1,6 +1,6 @@
 using System;
 
-namespace DDD.Areas.HelpPage.ModelDescriptions
+namespace DDDSyd2016.Areas.HelpPage.ModelDescriptions
 {
     public class ParameterAnnotation
     {

@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace DDD.Controllers
+namespace DDDSyd2016.Controllers
 {
     [Authorize]
     public class ValuesController : ApiController

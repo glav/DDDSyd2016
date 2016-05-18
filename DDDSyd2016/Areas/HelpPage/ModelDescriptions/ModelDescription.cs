@@ -1,6 +1,6 @@
 using System;
 
-namespace DDD.Areas.HelpPage.ModelDescriptions
+namespace DDDSyd2016.Areas.HelpPage.ModelDescriptions
 {
     /// <summary>
     /// Describes a type model.

@@ -1,6 +1,6 @@
 using System;
 
-namespace DDD.Areas.HelpPage.ModelDescriptions
+namespace DDDSyd2016.Areas.HelpPage.ModelDescriptions
 {
     /// <summary>
     /// Use this attribute to change the name of the <see cref="ModelDescription"/> generated for a type.

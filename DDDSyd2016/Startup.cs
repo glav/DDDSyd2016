@@ -14,7 +14,8 @@ namespace DDDSyd2016
         public void Configuration(IAppBuilder app)
         {
             //app.UseIdentityServerSimpleSetup();
-            app.UseIdentityServerCustomViewSetup();
+            //app.UseIdentityServerCustomViewSetup();
+            app.UseIdentityServerCustomStoreSetup();
         }
     }
 }

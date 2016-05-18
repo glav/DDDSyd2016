@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Net.Http.Headers;
 using System.Web.Http.Description;
-using DDD.Areas.HelpPage.ModelDescriptions;
+using DDDSyd2016.Areas.HelpPage.ModelDescriptions;
 
-namespace DDD.Areas.HelpPage.Models
+namespace DDDSyd2016.Areas.HelpPage.Models
 {
     /// <summary>
     /// The model that represents an API displayed on the help page.

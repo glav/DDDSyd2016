@@ -21,7 +21,7 @@ namespace DDDSyd2016.IdentityServer.IdentityServerConfig
         {
 
             LogProvider.SetCurrentLogProvider(new SimpleDiagnosticLoggerProvider(AppDomain.CurrentDomain.SetupInformation.ApplicationBase));
-            LogProvider.GetCurrentClassLogger().Log(IdentityServer3.Core.Logging.LogLevel.Info, () => { return "Starting up..."; });
+            LogProvider.GetCurrentClassLogger().Log(IdentityServer3.Core.Logging.LogLevel.Info, () => { return "Starting up custom view implementation..."; });
 
             var requireSsl = true;
 #if DEBUG

@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using DDD.Areas.HelpPage.ModelDescriptions;
-using DDD.Areas.HelpPage.Models;
+using DDDSyd2016.Areas.HelpPage.ModelDescriptions;
+using DDDSyd2016.Areas.HelpPage.Models;
 
-namespace DDD.Areas.HelpPage.Controllers
+namespace DDDSyd2016.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

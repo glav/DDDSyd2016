@@ -13,8 +13,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DDD</RootNamespace>
-    <AssemblyName>DDD</AssemblyName>
+    <RootNamespace>DDDSyd2016</RootNamespace>
+    <AssemblyName>DDDSyd2016</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -44,6 +44,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.40.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.42\lib\net45\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="IdentityServer3, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\IdentityServer3.2.5.0\lib\net45\IdentityServer3.dll</HintPath>
       <Private>True</Private>
@@ -231,13 +235,43 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="IdentityServer\CustomServices\ConnectionFactory.cs" />
+    <Compile Include="IdentityServer\CustomServices\CustomAuthorizationCodeStore.cs" />
+    <Compile Include="IdentityServer\CustomServices\CustomBaseTokenStore.cs" />
+    <Compile Include="IdentityServer\CustomServices\CustomClientPermissionsService.cs" />
+    <Compile Include="IdentityServer\CustomServices\CustomClientStore.cs" />
+    <Compile Include="IdentityServer\CustomServices\CustomConsentStore.cs" />
+    <Compile Include="IdentityServer\CustomServices\CustomIdentityUserService.cs" />
+    <Compile Include="IdentityServer\CustomServices\CustomRefreshTokenStore.cs" />
+    <Compile Include="IdentityServer\CustomServices\CustomScopeStore.cs" />
+    <Compile Include="IdentityServer\CustomServices\MyMembershipService.cs" />
+    <Compile Include="IdentityServer\CustomServices\CustomTokenHandleStore.cs" />
+    <Compile Include="IdentityServer\DapperRepo.cs" />
     <Compile Include="IdentityServer\Diagnostics\SimpleDiagnosticLogger.cs" />
+    <Compile Include="IdentityServer\Extensions\HashingExtensions.cs" />
     <Compile Include="IdentityServer\IdentityServerConfig\CertificateLoader.cs" />
+    <Compile Include="IdentityServer\IdentityServerConfig\IdentityServerCustomStoreSetup.cs" />
     <Compile Include="IdentityServer\IdentityServerConfig\IdentityServerCustomViewSetup.cs" />
     <Compile Include="IdentityServer\IdentityServerConfig\IdentityServerSimpleSetup.cs" />
     <Compile Include="IdentityServer\InMemoryRubbish\Clients.cs" />
     <Compile Include="IdentityServer\InMemoryRubbish\Scopes.cs" />
     <Compile Include="IdentityServer\InMemoryRubbish\Users.cs" />
+    <Compile Include="IdentityServer\Extensions\IdentityServerMappingExtensions.cs" />
+    <Compile Include="IdentityServer\Models\Client.cs" />
+    <Compile Include="IdentityServer\Models\ClientRedirectUri.cs" />
+    <Compile Include="IdentityServer\Models\ClientSecret.cs" />
+    <Compile Include="IdentityServer\Models\Consent.cs" />
+    <Compile Include="IdentityServer\Models\Scope.cs" />
+    <Compile Include="IdentityServer\Models\ScopeClaim.cs" />
+    <Compile Include="IdentityServer\Models\ScopeSecret.cs" />
+    <Compile Include="IdentityServer\Models\Token.cs" />
+    <Compile Include="IdentityServer\Models\User.cs" />
+    <Compile Include="IdentityServer\Serialization\AsyncHelper.cs" />
+    <Compile Include="IdentityServer\Serialization\ClaimConverter.cs" />
+    <Compile Include="IdentityServer\Serialization\ClaimsPrincipalConverter.cs" />
+    <Compile Include="IdentityServer\Serialization\ClientConverter.cs" />
+    <Compile Include="IdentityServer\Serialization\ScopeConverter.cs" />
+    <Compile Include="IdentityServer\TokenType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -259,6 +293,7 @@
     <Content Include="Content\IdentityServer\_logout.html" />
     <Content Include="Content\IdentityServer\_permissions.html" />
     <Content Include="Content\IdentityServer\_welcome.html" />
+    <Content Include="Content\images\LockAndKey2.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -320,7 +355,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

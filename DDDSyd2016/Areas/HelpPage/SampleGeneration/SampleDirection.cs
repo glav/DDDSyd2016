@@ -1,4 +1,4 @@
-namespace DDD.Areas.HelpPage
+namespace DDDSyd2016.Areas.HelpPage
 {
     /// <summary>
     /// Indicates whether the sample is used for request or response
