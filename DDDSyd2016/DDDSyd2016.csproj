@@ -235,7 +235,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="IdentityServer\CustomServices\ConnectionFactory.cs" />
     <Compile Include="IdentityServer\CustomServices\CustomAuthorizationCodeStore.cs" />
     <Compile Include="IdentityServer\CustomServices\CustomBaseTokenStore.cs" />
     <Compile Include="IdentityServer\CustomServices\CustomClientPermissionsService.cs" />
