@@ -374,5 +374,84 @@ begin
 END
 
 
+/* Client and AllowedRedirectUri below are for OpenId Scenario */
+IF NOT EXISTS (SELECT 1 FROM [Auth].[Clients] WHERE ClientId='mvc')
+BEGIN
+SET IDENTITY_INSERT [Auth].[Clients] ON
+INSERT INTO [Auth].[Clients]
+           ([Id]
+		   ,[Enabled]
+           ,[ClientId]
+           ,[ClientName]
+           ,[ClientUri]
+           ,[LogoUri]
+           ,[RequireConsent]
+           ,[AllowRememberConsent]
+           ,[Flow]
+           ,[AllowClientCredentialsOnly]
+           ,[LogoutUri]
+           ,[LogoutSessionRequired]
+           ,[RequireSignOutPrompt]
+           ,[AllowAccessToAllScopes]
+           ,[IdentityTokenLifetime]
+           ,[AccessTokenLifetime]
+           ,[AuthorizationCodeLifetime]
+           ,[AbsoluteRefreshTokenLifetime]
+           ,[SlidingRefreshTokenLifetime]
+           ,[RefreshTokenUsage]
+           ,[UpdateAccessTokenOnRefresh]
+           ,[RefreshTokenExpiration]
+           ,[AccessTokenType]
+           ,[EnableLocalLogin]
+           ,[IncludeJwtId]
+           ,[AlwaysSendClientClaims]
+           ,[PrefixClientClaims]
+           ,[AllowAccessToAllGrantTypes])
+     VALUES
+           (4
+		   ,1
+           ,'mvc'
+           ,'mvc client'
+           ,'http://localhost:35373/'
+           ,'https://somesite.com/logo/logo.jpg'
+           ,1
+           ,1
+           ,1 -- implicit
+           ,0
+           ,null
+           ,0
+           ,0
+           ,1
+           ,360 -- 5 minutes
+           ,3600 -- 1 hour
+           ,360 -- 5 minutes
+           ,86400 -- 24 hours
+           ,3600
+           ,0 -- reuse
+           ,1
+           ,0 -- absolute (1 == sliding)
+           ,1 -- Reference
+           ,1
+           ,1
+           ,1
+           ,1
+           ,1)
+	SET IDENTITY_INSERT [Auth].[Clients] OFF
+END
+go
+
+IF NOT EXISTS (SELECT 1 FROM [Auth].[ClientRedirectUris] WHERE [Client_Id]=4)
+begin
+	INSERT INTO [Auth].[ClientRedirectUris]
+			   ([Uri]
+			   ,[Client_Id])
+		 VALUES
+			   ('http://localhost:35373/'
+			   ,4)
+	-- Add in more redirect Uri's to support staging, production etc
+	
+END
+
+
 
 

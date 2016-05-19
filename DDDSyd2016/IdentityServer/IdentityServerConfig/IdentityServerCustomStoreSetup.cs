@@ -39,13 +39,6 @@ namespace DDDSyd2016.IdentityServer.IdentityServerConfig
                      IssuerUri = "http://AuthOmeSite.com",
                      SigningCertificate = CertificateLoader.LoadCertificate(),
 
-                     AuthenticationOptions = new AuthenticationOptions
-                     {
-                         CookieOptions = new IdentityServer3.Core.Configuration.CookieOptions
-                         {
-                         },
-                     },
-
                      LoggingOptions = GetFullLoggingConfig(),
                      Factory = new IdentityServerServiceFactory(),
                      EnableWelcomePage = true

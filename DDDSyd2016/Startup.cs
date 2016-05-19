@@ -15,7 +15,8 @@ namespace DDDSyd2016
         {
             //app.UseIdentityServerSimpleSetup();
             //app.UseIdentityServerCustomViewSetup();
-            app.UseIdentityServerCustomStoreSetup();
+            //app.UseIdentityServerCustomStoreSetup();
+            app.UseIdentityServerCustomStoreWithOpenIdMvcSetup();
         }
     }
 }

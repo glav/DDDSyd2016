@@ -61,7 +61,7 @@ namespace DDDSyd2016.IdentityServer
         {
             using (var conn = GetOpenConnection())
             {
-                var results = conn.Query<Token>(@"SELECT * FROM Auth.Tokens WHERE SubjectId = @Subject and TokenType=@TokenType", new { SubjectId = subject, TokenType = tokenType });
+                var results = conn.Query<Token>(@"SELECT * FROM Auth.Tokens WHERE SubjectId = @Subject and TokenType=@TokenType", new { Subject = subject, TokenType = tokenType });
                 return results;
             }
         }
